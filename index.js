@@ -1,6 +1,5 @@
 const express=require("express");
 const cors =require("cors");
-const { parse } = require("url");
 
 const app =express();
 app.use(cors());
