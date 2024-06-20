@@ -1,0 +1,16 @@
+const express=require("express");
+const cors =require("cors");
+const { parse } = require("url");
+
+const app =express();
+app.use(cors());
+
+app.get("/find",(req,res)=>{
+    let num = req.query.number;
+    console.log(num);
+    let n =parseFloat(num);
+    let r = n%2==0?"Even":"Odd";
+    res.json({"r":r});
+});
+
+app.listen(3000,()=>{console.log("ready @ 3000");});
